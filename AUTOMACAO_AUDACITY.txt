@@ -1,0 +1,36 @@
+# 🤖 AUTOMAÇÃO COMPLETA - AUDACITY MACRO
+
+## Como criar o macro "PettyZen_AutoComplete":
+
+1. No Audacity: Tools → Macros
+2. Clique "New" → digite: "PettyZen_AutoComplete"
+3. Adicione estes comandos EM ORDEM:
+
+Select All
+Amplify: Ratio=1.0 AllowClipping=No
+Truncate Silence: Threshold=20 Action=0 Minimum=0.5 Truncate=0.5
+Select: Start=0 End=300
+Trim
+Normalize: PeakLevel=-3 RemoveDcOffset=Yes ApplyGain=Yes StereoIndependent=No
+Generate: Type=Tone Frequency=50 Amplitude=0.05 Duration=300
+SelectAll
+Tracks > Mix > Mix and Render
+Select: Start=0 End=3
+Fade In
+Select: Start=297 End=300
+Fade Out
+ExportMP3: Channels=Stereo VBR=0 Quality=0
+
+## Como usar:
+1. Abra áudio no Audacity
+2. Tools → Macros → PettyZen_AutoComplete → Pallete
+3. AUTOMATICAMENTE: corta 5min + normaliza + adiciona 50Hz + fade + exporta MP3
+4. Salve como nome correto (rain.mp3, ocean.mp3, etc.)
+
+## ⚡ RESULTADO:
+- ✅ Duração: 5:00 exatos
+- ✅ Volume: Normalizado -3dB  
+- ✅ Frequência canina: 50Hz adicionada
+- ✅ Fade in/out: Suave
+- ✅ Formato: MP3 320kbps
+- ✅ Processo: 30 segundos por áudio!
